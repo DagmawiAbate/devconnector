@@ -5,25 +5,31 @@ import Landing from './components/layout/Landing'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import NoMatch from './components/NoMatch'
+// Redux
+import { Provider } from 'react-redux'
+import store from './store'
+
 import './App.css'
 
 const App = () => (
-  <Router>
-    <Fragment>
-      <Navbar />   
-      <Routes>
-        <Route exact path='/' element={<Landing />} />
-        <Route path='*' element={<NoMatch />} />
-      </Routes>
-      <section className='container'>
+  <Provider store = {store}>
+    <Router>
+      <Fragment>
+        <Navbar />
         <Routes>
-          <Route exact path='/register' element={<Register />} />
-          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/' element={<Landing />} />
           <Route path='*' element={<NoMatch />} />
         </Routes>
-      </section>
-    </Fragment>
-  </Router>
+        <section className='container'>
+          <Routes>
+            <Route exact path='/register' element={<Register />} />
+            <Route exact path='/login' element={<Login />} />
+            <Route path='*' element={<NoMatch />} />
+          </Routes>
+        </section>
+      </Fragment>
+    </Router>
+  </Provider>
 )
 
 export default App
