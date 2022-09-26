@@ -9,7 +9,7 @@ import {
 export const register = ({ name, email, password }) => async dispatch => {
   const config = {
     headers: {
-      'Content-Type': 'appliction/json'
+      'Content-Type': 'application/json'
     }
   }
 
