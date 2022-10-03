@@ -39,10 +39,10 @@ const App = () => {
             <Routes>
               <Route exact path='/register' element={<Register />} />
               <Route exact path='/login' element={<Login />} />
-              <Route path='dashboard' element={<PrivateRoute component={Dashboard} />  }>
-                {/* <Route element={<Dashboard />} path='/' exact/> */}
-              </Route>
-              {/* <Route exact path='/dashboard' element={<Dashboard />} /> */}
+              <Route
+                path='/dashboard'
+                element={<PrivateRoute component={Dashboard} />}
+              ></Route>
               <Route path='*' element={<NoMatch />} />
             </Routes>
           </section>
