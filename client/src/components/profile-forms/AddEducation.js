@@ -1,10 +1,11 @@
 import React, { Fragment, useState } from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { addEducation } from '../../actions/profile'
 
 const AddEducation = ({ addEducation, history }) => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     school: '',
     degree: '',
@@ -33,7 +34,7 @@ const AddEducation = ({ addEducation, history }) => {
         className='form'
         onSubmit={(e) => {
           e.preventDefault()
-          addEducation(formData, history)
+          addEducation(formData, navigate)
         }}
       >
         <div className='form-group'>
@@ -110,9 +111,9 @@ const AddEducation = ({ addEducation, history }) => {
           ></textarea>
         </div>
         <input type='submit' className='btn btn-primary my-1' />
-        <a className='btn btn-light my-1' href='dashboard.html'>
+        <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
-        </a>
+        </Link>
       </form>
     </Fragment>
   )
