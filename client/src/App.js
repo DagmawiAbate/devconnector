@@ -10,6 +10,7 @@ import CreateProfile from './components/profile-forms/CreateProfile'
 import EditProfile from './components/profile-forms/EditProfile'
 import AddExperience from './components/profile-forms/AddExperience'
 import AddEducation from './components/profile-forms/AddEducation'
+import Profiles from './components/profiles/Profiles'
 import PrivateRoute from './components/routing/PrivateRoute'
 import NoMatch from './components/NoMatch'
 // Redux
@@ -43,6 +44,7 @@ const App = () => {
             <Routes>
               <Route exact path='/register' element={<Register />} />
               <Route exact path='/login' element={<Login />} />
+              <Route exact path='/profiles' element={<Profiles />} />
               <Route
                 path='/dashboard'
                 element={<PrivateRoute component={Dashboard} />}
