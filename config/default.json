@@ -1,6 +1,6 @@
 {
   "mongoURI": "mongodb+srv://dagi123:dagi123@devconnector.kcqij.mongodb.net/?retryWrites=true&w=majority",
   "jwtSecret": "mysecrettoken",
-  "githubClientId": "174257bc113e95cc36d3",
-  "githubSecret": "a6dd11831fb94e2b695a4ecd0e5f41c065e1fd09"
+  "githubClientId": "2442e227280ff626e4d2",
+  "githubSecret": "9d1e8d56692d1fbb648ac3401ca0b90744881484"
 }
